@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+% For figures and graphics'n stuff
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cite}
+% \usepackage[numbers]{natbib}
+\usepackage{url}
+\usepackage{color}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{relsize}
+% \usepackage{xspace}
+\usepackage{bm}
+\usepackage{tabularx}
+\usepackage[toc,page]{appendix}
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+
+% \overfullrule=2cm
+
+\newcommand{\husk}[1]{\color{red} #1 \color{black}}
+\newcommand{\expect}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\bra}[1]{\langle{#1}|}
+\newcommand{\ket}[1]{|{#1}\rangle}
+\newcommand{\rn}{\mathbf{r}^\text{new}}
+\newcommand{\ro}{\mathbf{r}^\text{old}}
+
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+
+\title{An introduction to Lattice Quantum Chromodynamics}
+\author{Mathias M. Vege}
+
+\date{\today}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+% \tableofcontents
+
+\section{Introduction}
+The aim of this paper is to give a hand-on introduction to the how one can go from a rudimentary understanding of quantum mechanics and quantum field theory, to simulating quantum chromodynamics on the lattice. In order to kick this is of, let us begin by discussing our end-goal, Quantum Quantum Chromodynamics(QCD).
+
+QCD is the theory for interacting quarks and gluons. It has since its inception gotten a reputation notoriously difficult to work with, much because it is not linear due to its three- and four-vertex gluon self interactions. 
+
+\section{Refreshing quantum mechanics}
+\section{The path integral formalism}
+Wick rotation.
+\section{The Metropolis algorithm}
+\section{Statistical analyses}
+What is autocorrelation? Autocorrelation versus correlation?
+\subsection{Bootstrapping}
+\subsection{Jackknife method}
+\subsection{Blocking}
+\section{Quantum Field Theory and its fundamentals}
+\subsection{Observables}
+\subsection{Action}
+\section{Lattice Quantum Chromodynamics}
+\subsection{Making a theory gauge invariant}
+\subsection{The Plaquette}
+\subsection{The Wilson gauge action}
+\subsection{Notes on a Lattice QCD simulation}
+\subsubsection{Updating matrices}
+\subsubsection{Generating random \texorpdfstring{$SU(3)$}{SU3} matrices}
+\subsubsection{Generating random \texorpdfstring{$SU(2)$}{SU2} matrices}
+
+
+% \bibliography{refs}{}
+% %\bibliographystyle{plain}
+% \bibliographystyle{plainnat}
+
+\end{document}

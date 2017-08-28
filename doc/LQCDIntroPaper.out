@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Refreshing quantum mechanics}{}% 2
+\BOOKMARK [1][-]{section.3}{The path integral formalism}{}% 3
+\BOOKMARK [1][-]{section.4}{The Metropolis algorithm}{}% 4
+\BOOKMARK [1][-]{section.5}{Statistical analyses}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Bootstrapping}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{Jackknife method}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{Blocking}{section.5}% 8
+\BOOKMARK [1][-]{section.6}{Quantum Field Theory and its fundamentals}{}% 9
+\BOOKMARK [2][-]{subsection.6.1}{Observables}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.2}{Action}{section.6}% 11
+\BOOKMARK [1][-]{section.7}{Lattice Quantum Chromodynamics}{}% 12
+\BOOKMARK [2][-]{subsection.7.1}{Making a theory gauge invariant}{section.7}% 13
+\BOOKMARK [2][-]{subsection.7.2}{The Plaquette}{section.7}% 14
+\BOOKMARK [2][-]{subsection.7.3}{The Wilson gauge action}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.4}{Notes on a Lattice QCD simulation}{section.7}% 16
+\BOOKMARK [3][-]{subsubsection.7.4.1}{Updating matrices}{subsection.7.4}% 17
+\BOOKMARK [3][-]{subsubsection.7.4.2}{Generating random SU3 matrices}{subsection.7.4}% 18
+\BOOKMARK [3][-]{subsubsection.7.4.3}{Generating random SU2 matrices}{subsection.7.4}% 19
