@@ -1,0 +1,12 @@
+# OS Junk
+.DS_Store
+
+# Other junk
+
+# LaTeX junk
+*.aux
+*.fdb_latexmk
+*.log
+*.fls
+*.out
+*.synctex.gz
