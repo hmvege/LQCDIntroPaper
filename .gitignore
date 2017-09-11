@@ -11,3 +11,5 @@
 *.out
 *.synctex.gz
 doc/build/*
+*.bbl
+*.blg
