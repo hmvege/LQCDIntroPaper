@@ -1,3 +1,7 @@
 The aim of this paper is to give a hand-on introduction to the how one can go from a rudimentary understanding of quantum mechanics and quantum field theory, to simulating quantum chromodynamics on the lattice. In order to kick this is of, let us begin by discussing our end-goal, Quantum Quantum Chromodynamics(QCD).
 
-QCD is the theory for interacting quarks and gluons. It has since its inception gotten a reputation notoriously difficult to work with, much because it is not linear due to its three- and four-vertex gluon self interactions.
+QCD is the theory for interacting quarks and gluons. It has since its inception gotten a reputation notoriously difficult to work with, much because it is not linear due to its three- and four-vertex gluon self interactions. This makes solving it rather difficult, and in our search for understanding this theory we come to embrace lattice QCD.
+
+The Lattice QCD machinery is at its core a application of the Metropolis algorithm on solving path integrals. LQCD may at first glance seem familiar to the much simpler Ising model, but in contrast to the Ising model there are many more tools which need to be mastered and understood. Questions such as how to create a discretized field theory, how to analyze sparse datasets or parallelize code requiring communication between nodes will all be addressed in due time. The first step will be to understand the path integral formalism. Since this is a quantum theory, we will refresh ourselves on some basic quantum mechanics. 
+
+If the reader feels so inclined, feel free to skip to chapter about the Path Integral Formalism.
