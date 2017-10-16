@@ -1,7 +1,64 @@
-% Quick recap of the history and the milestone experiments
+% Fundamental postulates of quantum mechanics.
+\subsection{The postulates of quantum mechanics}
+Let us begin by recapitulating the postulates of quantum mechanics. Depending on what literature you are looking at, a different number of postulates will be listed [R Shankar, Griffiths, Laurent Nottale]. However, let us start by looking at those which count as the most fundamental ones, and expand upon them\footnote{If one wants to, there are actually three subsets of postulates in QM[see laurent nottale], the fundamental ones, the secondary ones which can be derived from the fundamental ones, and the principles which are more consequences of the fundamental ones.}.
 
-% Fundamental assumptions ect
+\begin{enumerate}[I]
+	\item \textit{Complex state function.} The state of a quantum mechanical system can be described by a complex valued vector, $\ket{\psi}$ that lives in Hilbert space $\mathcal{H}$. Vectors in Hilbert space is often referred to as states.
+	\item \textit{The correspondence principle.} A physical observable has an Hermitian operator. For every dynamical variable in classical mechanics, there is a corresponding quantum mechanical one. Further, the principle states we reproduce the classical results in the limit of large quantum numbers. Further, on order to convert to from classical to quantum mechanics, we replace the Poisson brackets with the the commutator ones divided by $i\hbar$.
+	\begin{align}
+		\{\cdot,\cdot\} \rightarrow \frac{1}{i\hbar}[\cdot,\cdot]
+		\label{eq:poisson}
+	\end{align}
+	Further, any observable $\hat{\Omega}$ measured will result in a eigenvalue $\omega$ associated with the observable. These are related through the equation eigenvalue equation, $\hat{\Omega}\ket{\psi}=\omega\ket{\psi}$
+	\item \textit{Von Neumann's postulate(collapse of state).} If we measure a system $\ket{\psi}$ with an observable $\Lambda$ and get the eigenvalue of $\omega_i$, then the system will be in a state $\ket{\psi_i}$ after the measurement\footnote{A measurement is here an ideal experiment which we minimally disturb the system and it is in compliance with theory. In classical mechanics, an ideal measurement is a measurement in which the system remains unaffected.}. We say that the system has \textit{collapsed} into state $\ket{\psi_i}$.
+	\item \textit{The Schröedinger equation.} We require a state vector $\ket{\psi(t)}$ to abide by the Schröedinger equation,
+	\begin{align}
+		i\hbar\frac{d}{dt}\ket{\psi(t)} = \hat{H} \ket{\psi(t)}
+		\label{eq:schroedinger}
+	\end{align}
+	where the Hamiltonian $\hat{H}$ is a linear Hermitian operator constructed accordingly to the correspondence principle.
+	\item \textit{Born's postulate.} The wave function squared $|\psi|^2$ is interpreted as a the probability of the system at a given configuration. For instance, the Probability of getting the eigenvalue $\omega_i$ in a state $\ket{\psi}$ is given by $|\langle\omega_i|\psi\rangle|^2$. This implies that the wave function must be normalized,
+	\begin{align}
+		\langle \psi | \psi \rangle = 1
+		\label{eq:wf-normalized}
+	\end{align}
+\end{enumerate}
+From these postulates follow several other properties and consequences. The first being expectation values.
+
+\subsubsection{Expectation values}
+Given some observable $\hat{\Omega}$ and a system described by a normalized wave function $\psi$, we have that the expectation value of that is given as the mean value from statistics.
+\begin{align*}
+	\langle \Omega \rangle &= \sum_i P(\omega_i) \omega_i = \sum_i |\bra{\omega_i}\psi\rangle|^2\omega_i \\
+	&= \sum_i \bra{\psi}\omega_i\rangle \langle\omega_i \ket{\psi} \omega_i \\
+	&= \sum_i \bra{\psi} \omega_i \ket{\omega_i} \langle\omega_i \ket{\psi} \\
+	&= \sum_i \bra{\psi} \hat{\Omega} \ket{\omega_i} \langle\omega_i \ket{\psi} \\
+	&= \bra{\psi} \hat{\Omega} \cdot I \ket{\psi} \\
+\end{align*}
+We used that $I = \sum_i \ket{\omega_i}\bra{\omega_i}$ and that the $\omega_i\ket{{\omega_i}} = \hat{\Omega}\ket{\omega_i}$. This gives us the expression for the expectation value,
+
+\begin{align}
+	\expect{\Omega} = \bra{\psi} \hat{\Omega} \ket{\psi}
+	\label{eq:expectation-value}
+\end{align}
+
+\subsubsection{Superposition principle}
+Applying the superposition principle in quantum mechanics, we get from the linearity of the Hamiltonian $\hat{H}$ in the Schröedinger equation\eqref{eq:schroedinger} that a quantum mechanical state is built up from a set of linear independent states. E.g.,
+\begin{align*}
+	\ket{w} = a\ket{u} + b\ket{v}
+\end{align*}
+
+\subsubsection{Expansion in eigenfunctions}
+A state $\ket{\psi}$ can be expanded in a basis of eigenfunctions $\ket{\psi_n}$ as
+\begin{align}
+	\psi = \sum_n c_n \ket{\psi_n}
+	\label{eq:eigenfunction-expansion}
+\end{align}
+We demand orthogonality form this set, such that 
+\begin{align}
+	\bra{\psi_n}\psi_m\rangle = \delta_{nm}
+	\label{eq:eig-func-orthogonality}
+\end{align}
 
 % Straight onto bra-ket formalism and what they mean
-
-% Some exercises? Do some myself?
+\textit{IS NEXT SECTION NEEDED?}
+Let us blast of with recapping some of the formalism of quantum mechanics, in particular what that is needed to perform calculations we are interested in.
