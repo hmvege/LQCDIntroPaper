@@ -25,6 +25,7 @@ Let us begin by recapitulating the postulates of quantum mechanics. Depending on
 \end{enumerate}
 From these postulates follow several other properties and consequences. The first being expectation values.
 
+\subsection{Operators}
 \subsubsection{Expectation values}
 Given some observable $\hat{\Omega}$ and a system described by a normalized wave function $\psi$, we have that the expectation value of that is given as the mean value from statistics.
 \begin{align*}
@@ -40,16 +41,17 @@ We used that $I = \sum_i \ket{\omega_i}\bra{\omega_i}$ and that the $\omega_i\ke
 	\expect{\Omega} = \bra{\psi} \hat{\Omega} \ket{\psi}
 	\label{eq:expectation-value}
 \end{align}
-INCLUDE DIFFERENCE BETWEEN PROB. AMP. AND PROB. DENSITY(mostly coz Mathias easily confuses this kinda stuff and needs to repeat it for himself).
+
+\subsubsection{Completeness}
 
 \subsubsection{Superposition principle}
-Applying the superposition principle in quantum mechanics, we get from the linearity of the Hamiltonian $\hat{H}$ in the Schröedinger equation\eqref{eq:schroedinger} that a quantum mechanical state is built up from a set of linear independent states. E.g.,
+Applying the superposition principle in quantum mechanics, we get from the linearity of the Hamiltonian $\hat{H}$ in the Schröedinger equation\eqref{eq:schroedinger} that a quantum mechanical state is built up from a set of linear independent states. E.g. $\ket{u},\ket{v} \in \mathcal{H}\$,
 \begin{align*}
 	\ket{w} = a\ket{u} + b\ket{v}
 \end{align*}
 
 \subsubsection{Expansion in eigenfunctions}
-A state $\ket{\psi}$ can be expanded in a basis of eigenfunctions $\ket{\psi_n}$ as
+A state $\ket{\psi}$ can be expanded in a basis of eigenfunctions $\ket{\psi_n} \in \mathcal{H}$ as
 \begin{align}
 	\psi = \sum_n c_n \ket{\psi_n}
 	\label{eq:eigenfunction-expansion}
@@ -60,9 +62,18 @@ We demand orthogonality form this set, such that
 	\label{eq:eig-func-orthogonality}
 \end{align}
 
+\subsubsection{Further properties of Hilbert space vectors}
+As both the superposition principle and expansion into a Hilbert basis has been covered, we will now list a few of the other properties vital to working in quantum mechanics. First, we have that the scalar product of two vectors in Hilbert space follows
+\begin{align}
+	&\bra{u}v\rangle = \bra{v}u\rangle^*, \\
+	&\bra{w}\alpha u + \beta v \rangle = \alpha \bra{w}u\rangle + \beta \bra{w}v\rangle
+\end{align}
+
+\subsubsection{Probability interpretation}
+The probability for finding a particle at a position $x$(assume we are in position space) is given by a function $|\psi(x)|^2$, probability per unit length. This is called the \textit{probability density}. The \textit{probability amplitude} is given by $\psi(x)$. The probability for finding the particle between two positions $x_1$ and $x_2$ is given by $\int^{x_2}_{x_1}|\psi(x)|^2dx$. The probability of finding a particle at position $x$ over a series of experiments is given by $\langle\psi|x|\psi\rangle = \int^\mathcal{R} \psi^*(x)x\psi(x)dx$.
+
+\subsubsection{Formalism}
 % Straight onto bra-ket formalism and what they mean
+As have been alluded to earlier, 
 \textit{IS NEXT SECTION NEEDED?}
 Let us blast of with recapping some of the formalism of quantum mechanics, in particular what that is needed to perform calculations we are interested in.
-
-Technical notes:
-difference between probability amplitude and probability density.
