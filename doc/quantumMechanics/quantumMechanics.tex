@@ -1,6 +1,6 @@
 % Fundamental postulates of quantum mechanics.
 \subsection{The postulates of quantum mechanics}
-Let us begin by recapitulating the postulates of quantum mechanics. Depending on what literature you are looking at, a different number of postulates will be listed [R Shankar, Griffiths, Laurent Nottale]. However, let us start by looking at those which count as the most fundamental ones, and expand upon them\footnote{If one wants to, there are actually three subsets of postulates in QM[see laurent nottale], the fundamental ones, the secondary ones which can be derived from the fundamental ones, and the principles which are more consequences of the fundamental ones.}.
+Let us begin by recapitulating the postulates of quantum mechanics. Depending on what literature you are looking at, a different number of postulates will be listed [Shankar\cite{Shankar}, Griffiths\cite{griffiths:quantum}, Laurent Nottale\cite{Nottale:2007ne}]. However, let us start by looking at those which count as the most fundamental ones, and expand upon them\footnote{If one wants to, there are actually three subsets of postulates in QM[see laurent nottale], the fundamental ones, the secondary ones which can be derived from the fundamental ones, and the principles which are more consequences of the fundamental ones.}.
 
 \begin{enumerate}[I]
 	\item \textit{Complex state function.} The state of a quantum mechanical system can be described by a complex valued vector, $\ket{\psi}$ that lives in Hilbert space $\mathcal{H}$. Vectors in Hilbert space is often referred to as states.
@@ -23,9 +23,70 @@ Let us begin by recapitulating the postulates of quantum mechanics. Depending on
 		\label{eq:wf-normalized}
 	\end{align}
 \end{enumerate}
-From these postulates follow several other properties and consequences. The first being expectation values.
+From these postulates follow several other properties and consequences.
+
+\subsection{Formalism of Quantum mechanics}
+As alluded to in the postulates, the quantum mechanical world is on of vectors and Hilbert spaces. The rules of this game are built on top of properties that follows from the Hilbert space.
+
+\subsubsection{Superposition principle}
+Applying the superposition principle in quantum mechanics, we get from the linearity of the Hamiltonian $\hat{H}$ in the Schröedinger equation \eqref{eq:schroedinger} that a quantum mechanical state is built up from a set of linear independent states. Given vectors $\ket{u},\ket{w} \in \mathcal{H}$(which are our wave functions) and complex numbers $\alpha,\beta$, we have that $\mathcal{H}$ is closed under addition and multiplication with scalars,
+\begin{align}
+	\ket{w} = \alpha\ket{u} + \beta\ket{v} \in \mathcal{H}
+	\label{eq:hilbert_linearity}
+\end{align}
+
+\subsubsection{Adjoint operator}
+Further, we have that the inner product maps the vectors to complex numbers. From this we have the property of complex conjugate operators,
+\begin{align}
+	\bra{u}v\rangle = \bra{v}u\rangle^*
+	\label{eq:complex_conjugate}
+\end{align}
+The inner product also adheres to the distributive property of complex numbers,
+\begin{align}
+	\bra{w}\alpha u + \beta v\rangle = \alpha\bra{w}u\rangle + \beta\bra{w}v\rangle
+	\label{eq:distributive_property}
+\end{align}
+
+\subsubsection{Expansion in eigenfunctions}
+A state $\ket{u}$ can be expanded in a basis of eigenfunctions $\ket{u_n} \in \mathcal{H}$ as
+\begin{align}
+	u = \sum_n c_n \ket{u_n}
+	\label{eq:eigenfunction-expansion}
+\end{align}
+We demand orthogonality form this set, such that 
+\begin{align}
+	\bra{u_n}v_m\rangle = \delta_{nm}
+	\label{eq:eig-func-orthogonality}
+\end{align}
+
+\subsubsection{Completeness relation}
+The unit operator $\mathrm{1}$ is given by
+\begin{align}
+	\mathrm{1} = \sum_n \ket{u_n} \bra{u_n}
+	\label{eq:unit-operator}
+\end{align}
 
 \subsection{Operators}
+An operator will map a vector $\ket{u}$ in Hilbert space onto another vector in Hilbert space,
+\begin{align}
+	\ket{u} \in \mathcal{H} \rightarrow \hat{\Omega}\ket{u} \in \mathcal{H}
+	\label{eq:operator-mapping}
+\end{align}
+The adjoint operator is defined by
+\begin{align}
+	\bra{u}\hat{\Omega}\ket{v} = \bra{v}\hat{\Omega}^\dagger\ket{u}^*
+	\label{eq:adjoint-operator}
+\end{align}
+An operator is \textit{self-adjoint} or \textit{Hermitian} if $\hat{\Omega}^\dagger = \hat{\Omega}$.
+
+\subsubsection{Eigenvectors and eigenvalues}
+The egeinvector(or eigenstate) of an operator $\ket{u}$ is given by
+\begin{align}
+	\hat{\Omega}\ket{u} = \lambda \ket{u}
+	\label{eq:}
+\end{align}
+with $\lambda$ being a complex number and the eigenvalue.
+
 \subsubsection{Expectation values}
 Given some observable $\hat{\Omega}$ and a system described by a normalized wave function $\psi$, we have that the expectation value of that is given as the mean value from statistics.
 \begin{align*}
@@ -36,44 +97,10 @@ Given some observable $\hat{\Omega}$ and a system described by a normalized wave
 	&= \bra{\psi} \hat{\Omega} \cdot I \ket{\psi} \\
 \end{align*}
 We used that $I = \sum_i \ket{\omega_i}\bra{\omega_i}$ and that the $\omega_i\ket{{\omega_i}} = \hat{\Omega}\ket{\omega_i}$. This gives us the expression for the expectation value,
-
 \begin{align}
 	\expect{\Omega} = \bra{\psi} \hat{\Omega} \ket{\psi}
 	\label{eq:expectation-value}
 \end{align}
 
-\subsubsection{Completeness}
-
-\subsubsection{Superposition principle}
-Applying the superposition principle in quantum mechanics, we get from the linearity of the Hamiltonian $\hat{H}$ in the Schröedinger equation\eqref{eq:schroedinger} that a quantum mechanical state is built up from a set of linear independent states. E.g. $\ket{u},\ket{v} \in \mathcal{H}\$,
-\begin{align*}
-	\ket{w} = a\ket{u} + b\ket{v}
-\end{align*}
-
-\subsubsection{Expansion in eigenfunctions}
-A state $\ket{\psi}$ can be expanded in a basis of eigenfunctions $\ket{\psi_n} \in \mathcal{H}$ as
-\begin{align}
-	\psi = \sum_n c_n \ket{\psi_n}
-	\label{eq:eigenfunction-expansion}
-\end{align}
-We demand orthogonality form this set, such that 
-\begin{align}
-	\bra{\psi_n}\psi_m\rangle = \delta_{nm}
-	\label{eq:eig-func-orthogonality}
-\end{align}
-
-\subsubsection{Further properties of Hilbert space vectors}
-As both the superposition principle and expansion into a Hilbert basis has been covered, we will now list a few of the other properties vital to working in quantum mechanics. First, we have that the scalar product of two vectors in Hilbert space follows
-\begin{align}
-	&\bra{u}v\rangle = \bra{v}u\rangle^*, \\
-	&\bra{w}\alpha u + \beta v \rangle = \alpha \bra{w}u\rangle + \beta \bra{w}v\rangle
-\end{align}
-
-\subsubsection{Probability interpretation}
-The probability for finding a particle at a position $x$(assume we are in position space) is given by a function $|\psi(x)|^2$, probability per unit length. This is called the \textit{probability density}. The \textit{probability amplitude} is given by $\psi(x)$. The probability for finding the particle between two positions $x_1$ and $x_2$ is given by $\int^{x_2}_{x_1}|\psi(x)|^2dx$. The probability of finding a particle at position $x$ over a series of experiments is given by $\langle\psi|x|\psi\rangle = \int^\mathcal{R} \psi^*(x)x\psi(x)dx$.
-
-\subsubsection{Formalism}
-% Straight onto bra-ket formalism and what they mean
-As have been alluded to earlier, 
-\textit{IS NEXT SECTION NEEDED?}
-Let us blast of with recapping some of the formalism of quantum mechanics, in particular what that is needed to perform calculations we are interested in.
+\subsection{Probability interpretation}
+The probability for finding a particle at a position $x$(assume we are in position space) is given by a function $|\psi(x)|^2$, probability per unit length. This is called the \textit{probability density}. The \textit{probability amplitude} is given by $\psi(x)$. The probability for finding the particle between two positions $x_1$ and $x_2$ is given by $\int^{x_2}_{x_1}|\psi(x)|^2dx$. The probability of finding a particle at position $x$ over a series of experiments is given by $\langle\psi|x|\psi\rangle = \int^\mathrm{R} \psi^*(x)x\psi(x)dx$.
