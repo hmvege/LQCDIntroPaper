@@ -1,13 +1,30 @@
-The path integral formalism saw its complete form in 1948 with the help of Richard Feynman\cite{RevModPhys.20.367}(but was however conceptualized somewhat earlier). The concept is both intuitive and elegant, and forms the basis of modern quantum field theory. 
+The path integral formalism saw its complete form in 1948 with the help of Richard Feynman\cite{RevModPhys.20.367}(but was however conceptualized somewhat earlier). The concept is both intuitive and elegant, and forms the basis of modern quantum field theory.
+
+\subsection{Path integral formalism in quantum mechanics}
+As the path integral formalism was first applied to quantum mechanics, it serves as a natural starting point. In quantum mechanics one usually starts by finding the eigenvalues and eigenstates of the Hamiltonian $H$, then proceeds to find the propagator $U(t)$. The basic idea of a path integral is to go directly to expressing the propagator $U(x,t;x_0,t_0)$. This propagator is describes the dynamics of a state $x_0$ evolving into another state $x$. Informally, we may think if this as:
+
+\begin{enumerate}
+	\item Draw all paths connecting $(x_0,t_0)$ and $(x,t)$.
+	\item Find the action(which serves as a weight) $S[x(t)]$ for each path $x(t)$.
+	\item The propagator can now be expressed as a sum of all paths written in an informal way,
+	\begin{align*}
+		U(x,t;x_0,t_0) = A \sum_\text{all paths} e^{iS[x(t)]/\hbar},
+	\end{align*}
+	with $A$ as a normalization constant.
+\end{enumerate}
+
+\begin{align}
+	U(x_1,t_1=t;x_0,t_0=0) \equiv U(x_1,x_0,t) = \bra{x_1} \exp \left( -\frac{i}{\hbar} H t \right) \ket{x_0}
+	\label{eq:propagator-definition-qm}
+\end{align}
+
+\subsection{Definition of the propagator}
 
 \subsection{Euclidean path integrals}
 
 \subsection{Correlation functions}
 
 \subsection{Wick rotations} % Move up?
-
-\subsection{Path integral formalism in quantum mechanics}
-Consider a particle 
 
 \subsection{The Euclidean picture}
 
