@@ -1,32 +1,44 @@
 The path integral formalism saw its complete form in 1948 with the help of Richard Feynman\cite{RevModPhys.20.367}(but was however conceptualized somewhat earlier). The concept is both intuitive and elegant, and forms the basis of modern quantum field theory.
 
 \subsection{Path integral formalism in quantum mechanics}
-As the path integral formalism was first applied to quantum mechanics, it serves as a natural starting point. In quantum mechanics one usually starts by finding the eigenvalues and eigenstates of the Hamiltonian $H$, then proceeds to find the propagator $U(t)$. The basic idea of a path integral is to go directly to expressing the propagator $U(x,t;x_0,t_0)$. This propagator is describes the dynamics of a state $x_0$ evolving into another state $x$. Informally, we may think if this as:
-
+As the path integral formalism was first applied to quantum mechanics, it serves as a natural starting point. In quantum mechanics one usually starts by finding the eigenvalues and eigenstates of the Hamiltonian,
+\begin{align*}
+	H = \frac{p^2}{2m} + V(x),
+\end{align*}
+and then proceeds to find the propagator $U(t)$. The basic idea of a path integral is to go directly to expressing the propagator $U(x,t;x_0,t_0)$. The \textit{propagator} describes the dynamics of a state $x_0$ evolving into another state $x$. Informally, we may think if this as:
 \begin{enumerate}
 	\item Draw all paths connecting $(x_0,t_0)$ and $(x,t)$.
-	\item Find the action(which serves as a weight) $S[x(t)]$ for each path $x(t)$.
+	\item Find the phase or action(which serves as a weight analogous to statistical mechanics) $S[x(t)]$ for each path $x(t)$.
 	\item The propagator can now be expressed as a sum of all paths written in an informal way,
 	\begin{align*}
-		U(x,t;x_0,t_0) = A \sum_\text{all paths} e^{iS[x(t)]/\hbar},
+		U(x,t;x_0,t_0) = \sum_\text{all paths} e^{iS[x(t)]},
 	\end{align*}
 	with $A$ as a normalization constant.
 \end{enumerate}
-
+From this simple idea, we can start by setting $t = t_1 - t_0$ and writing the sum of all paths as a integral of all possible paths.
+\begin{align*}
+	U(x,t;x_0,t_0) = \int \mathcal{D}x(t)e^{iS[x(t)]}
+\end{align*}
+The question of \textit{how} we will evaluate the integral comes from the classical idea that one satisfies the principle of least action (or the stationary condition \footnote{See introduction in chapter 9 in \cite{peskin}}),
+\begin{align*}
+	\frac{\delta}{\delta x(t)} \left( S\left[ x(t) \right] \right) \Big|_{\text{cl}} = 0
+\end{align*}
+with $S = \int dt L$ as the classical action. If we now assume that $S \gg \hbar$, we get our quantum mechanical path integral,
 \begin{align}
-	U(x_1,t_1=t;x_0,t_0=0) \equiv U(x_1,x_0,t) = \bra{x_1} \exp \left( -\frac{i}{\hbar} H t \right) \ket{x_0}
+	U(x_1,x_0,t) = \bra{x_1} \exp \left( -\frac{i}{\hbar} H t \right) \ket{x_0} = \int \mathcal{D}x(t)e^{iS[x(t)]/\hbar}
 	\label{eq:propagator-definition-qm}
 \end{align}
-
-If we now write out 
-
-\subsection{Definition of the propagator}
-
-\subsection{Euclidean path integrals}
+The idea of the path integral will be omnipresent in all of our calculations in Lattice QCD, and we will keep coming back to it in later chapters.
 
 \subsection{Correlation functions}
+When we wish to compute an observable o
 
-\subsection{Wick rotations} % Move up?
+\subsection{Discretizing the path integral in quantum mechanics}
+
+\subsubsection{Euclidean path integrals}
+
+\subsubsection{Wick rotations} % Move up?
+
 
 \subsection{The Euclidean picture}
 
